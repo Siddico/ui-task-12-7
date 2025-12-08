@@ -213,6 +213,7 @@ Widget buildTopRankedCard() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
     child: Stack(
+      fit: StackFit.loose,
       clipBehavior: Clip.none,
       children: [
         Container(
@@ -302,3 +303,12 @@ Widget buildTopRankedCard() {
     ),
   );
 }
+
+// Widget buildText() {
+//   return Column(
+//     children: [
+//       Text('Teeeeeeeeeeeeeeeeeeeeeext1'),
+//       Text('Teeeeeeeeeeeeeeeeext2'),
+//     ],
+//   );
+// }

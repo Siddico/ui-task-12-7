@@ -18,7 +18,33 @@ class _ECommerceHomeViewState extends State<ECommerceHomeView> {
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: CustomAppBarSliver()),
-
+          SliverToBoxAdapter(
+            child: Container(
+              color: Colors.white,
+              height: 75,
+              padding: EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 115,
+                    height: 50,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Featured", style: TextStyle(fontSize: 24)),
+                        Expanded(child: SizedBox()),
+                        Container(height: 3, color: Colors.blue),
+                      ],
+                    ),
+                  ),
+                  Text("Categories", style: TextStyle(fontSize: 24)),
+                  Text("Trending", style: TextStyle(fontSize: 24)),
+                ],
+              ),
+            ),
+          ),
           SliverToBoxAdapter(
             child: SizedBox(
               height: 480,

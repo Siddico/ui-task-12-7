@@ -26,6 +26,11 @@ class MyApp extends StatelessWidget {
       // home: const BasicProfile(),
       // home: ProfileZoomDrawer(controller: controller),
       home: const ECommerceHomeView(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => ECommerceHomeView(),
+        '/profile': (context) => ProfileZoomDrawer(controller: controller),
+      },
     );
   }
 }

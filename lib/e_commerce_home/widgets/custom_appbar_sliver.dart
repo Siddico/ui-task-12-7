@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:tt1/profile_task/Advanced/profile_zoom_drawer.dart';
 
 class CustomAppBarSliver extends StatelessWidget {
-  const CustomAppBarSliver({super.key});
-
+  CustomAppBarSliver({super.key});
+  final ZoomDrawerController controller = ZoomDrawerController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +22,12 @@ class CustomAppBarSliver extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.menu, size: 26, color: Colors.white),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/profile');
+                  },
+                  child: Icon(Icons.menu, size: 26, color: Colors.white),
+                ),
                 Center(
                   child: Text(
                     'Appbar',
